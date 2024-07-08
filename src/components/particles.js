@@ -487,10 +487,10 @@ const ParticlesComponent = (props) => {
             rotate: {
             value: 0,
             animation: {
-              enable: false,
-              speed: 0,
-              decay: 0,
-              sync: false
+                enable: false,
+                speed: 0,
+                decay: 0,
+                sync: false
             },
             direction: "clockwise",
             path: false
@@ -563,7 +563,12 @@ const ParticlesComponent = (props) => {
     [],
 );
 
-    return <Particles id={props.id} init={particlesLoaded} options={options} />; 
+    if (init) {
+    return <Particles 
+    id={props.id} 
+    init={particlesLoaded} 
+    options={options} />; 
+    }
 };
 
 export default ParticlesComponent;

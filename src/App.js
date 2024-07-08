@@ -13,7 +13,6 @@ function App() {
   const getActivity = async() => {
     const response = await fetch(`https://bored.api.lewagon.com/api/activity`);
     const data = await response.json();
-    console.log(data.activity);
     setActivity(data.activity);
   }
 
